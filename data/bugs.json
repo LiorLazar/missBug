@@ -1,0 +1,23 @@
+[
+    {
+        "_id": "U3Feb",
+        "title": "Cannot save a new car",
+        "description": "problem when clicking Save",
+        "severity": 3,
+        "createdAt": 1542107359454
+    },
+    {
+        "_id": "EHJzG",
+        "title": "Login form validation error",
+        "description": "Email validation fails with valid email addresses",
+        "severity": 2,
+        "createdAt": 1542108359454
+    },
+    {
+        "_id": "rxEiS",
+        "title": "Image upload crashes application",
+        "description": "App freezes when uploading images larger than 5MB",
+        "severity": 1,
+        "createdAt": 1542109359454
+    }
+]
