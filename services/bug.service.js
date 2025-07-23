@@ -1,4 +1,4 @@
-import { readJsonFile, writeJsonFile } from "./util.service.js";
+import { makeId, readJsonFile, writeJsonFile } from "./util.service.js";
 
 const bugs = readJsonFile('./data/bug.json')
 
@@ -29,4 +29,16 @@ function remove(bugId) {
 
 function _saveBugs() {
     return writeJsonFile('./data/bug.json', bugs)
+}
+
+function save(bugToSave) {
+    if (bugToSave._id) {
+        const idx = bugs.findIndex(bug => bug._id === bugToSave._id)
+        bugs.splice(idx, 1, bugToSave)
+    } else {
+        bugToSave._id = makeId()
+        bugs.push(bugToSave)
+    }
+    return _saveBugs()
+        .then(() => bugToSave)
 }
