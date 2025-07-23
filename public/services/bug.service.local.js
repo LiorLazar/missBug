@@ -15,19 +15,19 @@ export const bugService = {
 
 function query(filterBy) {
     return storageService.query(STORAGE_KEY)
-    .then(bugs => {
+        .then(bugs => {
 
-        if (filterBy.txt) {
-            const regExp = new RegExp(filterBy.txt, 'i')
-            bugs = bugs.filter(bug => regExp.test(bug.title))
-        }
+            if (filterBy.txt) {
+                const regExp = new RegExp(filterBy.txt, 'i')
+                bugs = bugs.filter(bug => regExp.test(bug.title))
+            }
 
-        if (filterBy.minSeverity) {
-            bugs = bugs.filter(bug => bug.severity >= filterBy.minSeverity)
-        }
+            if (filterBy.minSeverity) {
+                bugs = bugs.filter(bug => bug.severity >= filterBy.minSeverity)
+            }
 
-        return bugs
-    })
+            return bugs
+        })
 }
 
 function getById(bugId) {
@@ -48,26 +48,30 @@ function save(bug) {
 
 function _createBugs() {
     let bugs = utilService.loadFromStorage(STORAGE_KEY)
-    if (bugs && bugs.length > 0) return 
+    if (bugs && bugs.length > 0) return
 
     bugs = [
         {
             title: "Infinite Loop Detected",
+            description: "Application gets stuck in an endless loop when processing user input",
             severity: 4,
             _id: "1NF1N1T3"
         },
         {
             title: "Keyboard Not Found",
+            description: "System fails to detect keyboard input device on startup",
             severity: 3,
             _id: "K3YB0RD"
         },
         {
             title: "404 Coffee Not Found",
+            description: "Coffee machine API returns 404 error during morning hours",
             severity: 2,
             _id: "C0FF33"
         },
         {
             title: "Unexpected Response",
+            description: "Server returns random goose sounds instead of JSON data",
             severity: 1,
             _id: "G0053"
         }
