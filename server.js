@@ -3,6 +3,7 @@ import { bugService } from './services/bug.service.js'
 
 // App Init
 const app = express()
+app.use(express.static('public'))
 
 // App Routing
 app.get('/', (req, res) => res.send('Hello there'))
