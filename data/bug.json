@@ -26,12 +26,5 @@
     "description": "undefined",
     "severity": 3,
     "createdAt": null
-  },
-  {
-    "_id": "U8niz",
-    "title": "Bug 1753303978976",
-    "description": "test",
-    "severity": 3,
-    "createdAt": null
   }
 ]
