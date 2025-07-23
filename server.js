@@ -1,5 +1,6 @@
 import express from 'express'
 import { bugService } from './services/bug.service.js'
+import { loggerService } from './services/logger.service.js'
 
 // App Init
 const app = express()
@@ -25,6 +26,10 @@ app.get('/api/bug/save', (req, res) => {
 
     bugService.save(bugToSave)
         .then(savedBug => res.send(savedBug))
+        .catch(err => {
+            loggerService.error(err)
+            res.status(400).send(err)
+        })
 })
 
 app.get('/api/bug/:bugId', (req, res) => {
@@ -32,6 +37,10 @@ app.get('/api/bug/:bugId', (req, res) => {
 
     bugService.getById(bugId)
         .then(bug => res.send(bug))
+        .catch(err => {
+            loggerService.error(err)
+            res.status(400).send(err)
+        })
 })
 
 app.get('/api/bug/:bugId/remove', (req, res) => {
@@ -40,8 +49,12 @@ app.get('/api/bug/:bugId/remove', (req, res) => {
 
     bugService.remove(bugId)
         .then(() => res.send(`bug ${bugId} deleted`))
+        .catch(err => {
+            loggerService.error(err)
+            res.status(400).send(err)
+        })
 })
 
 // App Settings
 const port = 3030
-app.listen(port, () => console.log(`Server listening on port https://127.0.0.1:${port}/`))
+app.listen(port, () => loggerService.info(`Server listening on port https://127.0.0.1:${port}/`))
