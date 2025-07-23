@@ -1,0 +1,24 @@
+{
+  "name": "miss-bug",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/LiorLazar/missBug#readme",
+  "bugs": {
+    "url": "https://github.com/LiorLazar/missBug/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiorLazar/missBug.git"
+  },
+  "license": "ISC",
+  "author": "Lior Lazar",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --ignore \"./data\" server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
