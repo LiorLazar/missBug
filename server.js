@@ -7,9 +7,16 @@ const app = express()
 // App Routing
 app.get('/', (req, res) => res.send('Hello there'))
 
-app.get('/api/bugs', (req, res) => {
+app.get('/api/bug', (req, res) => {
     bugService.query()
         .then(bugs => res.send(bugs))
+})
+
+app.get('/api/bug/:id', (req, res) => {
+    const bugId = req.params.id
+
+    bugService.getById(bugId)
+        .then(bug => res.send(bug))
 })
 
 // App Settings
