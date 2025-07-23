@@ -12,11 +12,23 @@ app.get('/api/bug', (req, res) => {
         .then(bugs => res.send(bugs))
 })
 
-app.get('/api/bug/:id', (req, res) => {
-    const bugId = req.params.id
+app.get('/api/bug/save', (req,res) => {
+    
+})
+
+app.get('/api/bug/:bugId', (req, res) => {
+    const bugId = req.params.bugId
 
     bugService.getById(bugId)
         .then(bug => res.send(bug))
+})
+
+app.get('/api/bug/:bugId/remove', (req, res) => {
+    const bugId = req.params.bugId
+    console.log(bugId)
+
+    bugService.remove(bugId)
+        .then(() => res.send(`bug ${bugId} deleted`))
 })
 
 // App Settings

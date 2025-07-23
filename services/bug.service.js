@@ -1,10 +1,12 @@
-import { readJsonFile } from "./util.service.js";
+import { readJsonFile, writeJsonFile } from "./util.service.js";
 
-const bugs = readJsonFile('./data/bugs.json')
+const bugs = readJsonFile('./data/bug.json')
 
 export const bugService = {
     query,
-    getById
+    getById,
+    remove,
+    save
 }
 
 function query() {
@@ -14,4 +16,17 @@ function query() {
 function getById(bugId) {
     const bug = bugs.find(bug => bug._id === bugId)
     return Promise.resolve(bug)
+}
+
+function remove(bugId) {
+    console.log('bugs-before:', bugs)
+    const idx = bugs.findIndex(bug => bug._id === bugId)
+    bugs.splice(idx, 1)
+    console.log('bugs-after:', bugs)
+
+    return _saveBugs()
+}
+
+function _saveBugs() {
+    return writeJsonFile('./data/bug.json', bugs)
 }

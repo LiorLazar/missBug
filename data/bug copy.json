@@ -8,15 +8,15 @@
     },
     {
         "_id": "EHJzG",
-        "title": "Login form validation error",
-        "description": "Email validation fails with valid email addresses",
+        "title": "User profile image not loading",
+        "description": "Profile pictures appear as broken links",
         "severity": 2,
         "createdAt": 1542108359454
     },
     {
         "_id": "rxEiS",
-        "title": "Image upload crashes application",
-        "description": "App freezes when uploading images larger than 5MB",
+        "title": "Payment processing fails",
+        "description": "Credit card transactions timeout after 30 seconds",
         "severity": 1,
         "createdAt": 1542109359454
     }
