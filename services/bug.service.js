@@ -1,3 +1,4 @@
+import { loggerService } from "./logger.service.js";
 import { makeId, readJsonFile, writeJsonFile } from "./util.service.js";
 
 const bugs = readJsonFile('./data/bug.json')
@@ -15,15 +16,22 @@ function query() {
 
 function getById(bugId) {
     const bug = bugs.find(bug => bug._id === bugId)
+
+    if (!bug) {
+        loggerService.error(`Couldnt find bug ${bugId} in bugService`)
+        return Promise.reject(`Couldnt find bug`)
+    }
     return Promise.resolve(bug)
 }
 
 function remove(bugId) {
-    console.log('bugs-before:', bugs)
     const idx = bugs.findIndex(bug => bug._id === bugId)
-    bugs.splice(idx, 1)
-    console.log('bugs-after:', bugs)
+    if (idx === -1) {
+        loggerService.error(`couldnt find bug ${bugId} in bugService`)
+        return Promise.reject('Couldnt remove bug')
+    }
 
+    bugs.splice(idx, 1)
     return _saveBugs()
 }
 
@@ -34,6 +42,11 @@ function _saveBugs() {
 function save(bugToSave) {
     if (bugToSave._id) {
         const idx = bugs.findIndex(bug => bug._id === bugToSave._id)
+
+        if (idx === -1) {
+            loggerService.error(`Couldnt find bug ${bugToSave._id} in bugService`)
+            return Promise.reject('Couldt save bug')
+        }
         bugs.splice(idx, 1, bugToSave)
     } else {
         bugToSave._id = makeId()
