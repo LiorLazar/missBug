@@ -69,6 +69,9 @@ function _saveBugs() {
 }
 
 function save(bugToSave) {
+    if (!bugToSave.labels) {
+        bugToSave.labels = []
+    }
     if (bugToSave._id) {
         const idx = bugs.findIndex(bug => bug._id === bugToSave._id)
 

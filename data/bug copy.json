@@ -1,23 +1,114 @@
 [
     {
-        "_id": "U3Feb",
-        "title": "Cannot save a new car",
-        "description": "problem when clicking Save",
-        "severity": 3,
-        "createdAt": 1542107359454
-    },
-    {
         "_id": "EHJzG",
         "title": "User profile image not loading",
         "description": "Profile pictures appear as broken links",
         "severity": 2,
-        "createdAt": 1542108359454
+        "createdAt": 1542108359454,
+        "labels": [
+            "ui",
+            "images",
+            "profile"
+        ]
     },
     {
         "_id": "rxEiS",
-        "title": "Payment processing fails",
-        "description": "Credit card transactions timeout after 30 seconds",
+        "title": "Payment processing fails - Test",
+        "description": "Credit card transactions timeout after 30 seconds - Test",
+        "severity": 3,
+        "createdAt": 1542109359454,
+        "labels": [
+            "payment",
+            "timeout",
+            "critical"
+        ]
+    },
+    {
+        "_id": "A7k9L",
+        "title": "Login form validation error",
+        "description": "Email validation accepts invalid email formats",
+        "severity": 2,
+        "createdAt": 1542110359454,
+        "labels": [
+            "authentication",
+            "validation",
+            "forms"
+        ]
+    },
+    {
+        "_id": "B2m8N",
+        "title": "Database connection timeout",
+        "description": "Connection to database fails after 30 seconds of inactivity",
         "severity": 1,
-        "createdAt": 1542109359454
+        "createdAt": 1542111359454,
+        "labels": [
+            "database",
+            "timeout",
+            "critical",
+            "backend"
+        ]
+    },
+    {
+        "_id": "C5p1Q",
+        "title": "Mobile responsive layout broken",
+        "description": "Navigation menu overlaps content on mobile devices",
+        "severity": 2,
+        "createdAt": 1542112359454,
+        "labels": [
+            "mobile",
+            "responsive",
+            "ui",
+            "navigation"
+        ]
+    },
+    {
+        "_id": "D9t4R",
+        "title": "Memory leak in dashboard",
+        "description": "Browser memory usage increases over time when dashboard is open",
+        "severity": 1,
+        "createdAt": 1542113359454,
+        "labels": [
+            "performance",
+            "memory",
+            "dashboard",
+            "critical"
+        ]
+    },
+    {
+        "_id": "E3w7S",
+        "title": "Search function returns no results",
+        "description": "Search bar does not return any results even with valid queries",
+        "severity": 3,
+        "createdAt": 1542114359454,
+        "labels": [
+            "search",
+            "functionality",
+            "backend"
+        ]
+    },
+    {
+        "_id": "F6z0T",
+        "title": "File upload progress bar stuck",
+        "description": "Progress bar shows 0% even when file upload is completing successfully",
+        "severity": 4,
+        "createdAt": 1542115359454,
+        "labels": [
+            "ui",
+            "upload",
+            "progress",
+            "minor"
+        ]
+    },
+    {
+        "_id": "G1y3U",
+        "title": "Notification sound not working",
+        "description": "Push notifications display correctly but no sound is played",
+        "severity": 4,
+        "createdAt": 1542116359454,
+        "labels": [
+            "notifications",
+            "audio",
+            "minor"
+        ]
     }
 ]

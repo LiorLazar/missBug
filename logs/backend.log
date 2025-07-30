@@ -328,3 +328,41 @@
 30.7.2025, 22:18:08 - DEBUG - Created Bug: | {"title":"Bug 1753903084463","description":"rrrr","severity":3,"createdAt":1753903088947,"_id":"rZpQB"}
 30.7.2025, 22:21:30 - INFO - Server listening on port https://127.0.0.1:3030/
 30.7.2025, 22:25:43 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:29:57 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:30:20 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:30:32 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:31:04 - DEBUG - Created Bug: | {"title":"Bug 1753903860271","description":"eee","severity":3,"createdAt":1753903864910,"labels":[],"_id":"l745V"}
+30.7.2025, 22:31:06 - DEBUG - Bug l745V has been removed successfully.
+30.7.2025, 22:33:35 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:33:40 - DEBUG - Created Bug: | {"title":"Bug 1753904017362","description":"dd","severity":3,"createdAt":1753904020360,"labels":[],"_id":"ZZWKH"}
+30.7.2025, 22:33:43 - DEBUG - Requested Bug - ZZWKH - Full Requested Bug: {"title":"Bug 1753904017362","description":"dd","severity":3,"createdAt":1753904020360,"labels":[],"_id":"ZZWKH"}
+30.7.2025, 22:34:21 - DEBUG - Created Bug: | {"title":"Bug 1753904057814","description":"dd","severity":3,"createdAt":1753904061069,"labels":[],"_id":"pxRN2"}
+30.7.2025, 22:34:24 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:34:31 - DEBUG - Created Bug: | {"title":"Bug 1753904066800","description":"dd","severity":3,"createdAt":1753904071784,"labels":[],"_id":"joNrq"}
+30.7.2025, 22:35:05 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:35:11 - DEBUG - Created Bug: | {"title":"Bug 1753904107960","description":"dd","severity":3,"createdAt":1753904111449,"labels":[],"_id":"5dkFc"}
+30.7.2025, 22:35:46 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:35:50 - DEBUG - Created Bug: | {"title":"Bug 1753904147724","description":"dd","severity":3,"createdAt":1753904150404,"labels":[],"_id":"LLu5J"}
+30.7.2025, 22:36:30 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:37:04 - DEBUG - Created Bug: | {"title":"Bug 1753904220598","description":"cc","severity":3,"createdAt":1753904224495,"labels":[],"_id":"mJo3s"}
+30.7.2025, 22:37:22 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:37:29 - DEBUG - Created Bug: | {"title":"Bug 1753904246762","description":"xx","severity":3,"createdAt":1753904249881,"labels":[],"_id":"pXL7m"}
+30.7.2025, 22:37:37 - DEBUG - Requested Bug - joNrq - Full Requested Bug: {"title":"Bug 1753904066800","description":"dd","severity":3,"createdAt":1753904071784,"labels":[],"_id":"joNrq"}
+30.7.2025, 22:40:26 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:40:35 - DEBUG - Created Bug: | {"title":"Bug 1753904430415","description":"e","severity":3,"createdAt":1753904435185,"labels":[],"_id":"sRSYH"}
+30.7.2025, 22:40:58 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:41:07 - DEBUG - Created Bug: | {"title":"Bug 1753904463720","description":"ee","severity":3,"createdAt":1753904467715,"labels":[],"_id":"3lI06"}
+30.7.2025, 22:41:24 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:41:26 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:41:28 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:41:34 - DEBUG - Created Bug: | {"title":"Bug 1753904491001","description":"dd","severity":3,"createdAt":1753904494047,"labels":[],"_id":"un4bJ"}
+30.7.2025, 22:42:18 - DEBUG - Created Bug: | {"title":"Bug 1753904535517","description":"dd","severity":3,"createdAt":1753904538267,"labels":[],"_id":"7o7cy"}
+30.7.2025, 22:42:22 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:42:27 - DEBUG - Created Bug: | {"title":"Bug 1753904544390","description":"d","severity":0,"createdAt":1753904547435,"labels":[],"_id":"SP7TY"}
+30.7.2025, 22:43:11 - DEBUG - Created Bug: | {"title":"Bug 1753904588207","description":null,"severity":0,"createdAt":1753904591646,"labels":[],"_id":"5vbMv"}
+30.7.2025, 22:43:40 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:43:51 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:45:44 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:45:58 - DEBUG - Created Bug: | {"title":"Bug 1753904753277","description":"ww","severity":3,"createdAt":1753904758639,"labels":["ui","bug"],"_id":"tjq3k"}
+30.7.2025, 22:46:20 - DEBUG - Created Bug: | {"title":"Bug 1753904776085","description":"ggg","severity":3,"createdAt":1753904780691,"labels":["ui","bug"],"_id":"2Udek"}
+30.7.2025, 22:46:24 - DEBUG - Requested Bug - 2Udek - Full Requested Bug: {"title":"Bug 1753904776085","description":"ggg","severity":3,"createdAt":1753904780691,"labels":["ui","bug"],"_id":"2Udek"}

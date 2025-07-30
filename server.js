@@ -37,7 +37,8 @@ app.post('/api/bug', (req, res) => {
         title: req.body.title,
         description: req.body.description,
         severity: +req.body.severity,
-        createdAt: Date.now()
+        createdAt: Date.now(),
+        labels: req.body.labels,
     }
 
     bugService.save(bugToSave)
@@ -58,7 +59,8 @@ app.put('/api/bug/:bugId', (req, res) => {
         title: req.body.title,
         description: req.body.description,
         severity: +req.body.severity,
-        createdAt: +req.body.createdAt
+        createdAt: +req.body.createdAt,
+        labels: req.body.labels,
     }
 
     bugService.save(bugToSave)
