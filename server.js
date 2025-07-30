@@ -28,21 +28,23 @@ app.get('/api/bug', (req, res) => {
 
 //* Create
 
-app.get('/api/bug/save', (req, res) => {
-    const { _id, title, description, severity, createdAt } = req.query
+app.post('/api/bug', (req, res) => {
+    // const { _id, title, description, severity, createdAt } = req.query
     const bugToSave = {
-        _id,
-        title,
-        description,
-        severity: +severity,
-        createdAt: +createdAt
+        title: req.body.title,
+        description: req.body.description,
+        severity: +req.body.severity,
+        createdAt: Date.now()
     }
 
     bugService.save(bugToSave)
-        .then(savedBug => res.send(savedBug))
+        .then(savedBug => {
+            res.send(savedBug)
+            loggerService.debug('Created Bug:', savedBug)
+        })
         .catch(err => {
-            loggerService.error(err)
-            res.status(400).send(err)
+            loggerService.error('Cannot save bug', err)
+            res.status(400).send('Cannot save bug')
         })
 })
 
