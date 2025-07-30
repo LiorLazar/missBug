@@ -376,3 +376,45 @@
 30.7.2025, 22:53:01 - INFO - Server listening on port https://127.0.0.1:3030/
 30.7.2025, 22:53:05 - INFO - Server listening on port https://127.0.0.1:3030/
 30.7.2025, 22:53:05 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:56:06 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:56:22 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:56:26 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:56:32 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:56:35 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:56:39 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:56:56 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:57:21 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:57:33 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:57:34 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:57:37 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:57:59 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:58:00 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:58:42 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:59:01 - DEBUG - Requested Bug - EHJzG - Full Requested Bug: {"_id":"EHJzG","title":"User profile image not loading","description":"Profile pictures appear as broken links","severity":2,"createdAt":1542108359454,"labels":["ui","images","profile"]}
+30.7.2025, 22:59:53 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:00:00 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:00:33 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:00:41 - DEBUG - Requested Bug - EHJzG - Full Requested Bug: {"_id":"EHJzG","title":"User profile image not loading","description":"Profile pictures appear as broken links","severity":2,"createdAt":1542108359454,"labels":["ui","images","profile"]}
+30.7.2025, 23:00:48 - DEBUG - Requested Bug - rxEiS - Full Requested Bug: {"_id":"rxEiS","title":"Payment processing fails - Test","description":"Credit card transactions timeout after 30 seconds - Test","severity":3,"createdAt":1542109359454,"labels":["payment","timeout","critical"]}
+30.7.2025, 23:01:13 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:01:19 - DEBUG - Requested Bug - EHJzG - Full Requested Bug: {"_id":"EHJzG","title":"User profile image not loading","description":"Profile pictures appear as broken links","severity":2,"createdAt":1542108359454,"labels":["ui","images","profile"]}
+30.7.2025, 23:01:52 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:02:22 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:02:25 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:02:26 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:02:28 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:02:28 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:02:31 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:02:53 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:02:59 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:03:02 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:03:03 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:03:11 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:03:19 - DEBUG - Requested Bug - rxEiS - Full Requested Bug: {"_id":"rxEiS","title":"Payment processing fails - Test","description":"Credit card transactions timeout after 30 seconds - Test","severity":3,"createdAt":1542109359454,"labels":["payment","timeout","critical"]}
+30.7.2025, 23:03:25 - DEBUG - Requested Bug - A7k9L - Full Requested Bug: {"_id":"A7k9L","title":"Login form validation error","description":"Email validation accepts invalid email formats","severity":2,"createdAt":1542110359454,"labels":["authentication","validation","forms"]}
+30.7.2025, 23:03:35 - DEBUG - Requested Bug - A7k9L - Full Requested Bug: {"_id":"A7k9L","title":"Login form validation error","description":"Email validation accepts invalid email formats","severity":2,"createdAt":1542110359454,"labels":["authentication","validation","forms"]}
+30.7.2025, 23:03:47 - ERROR - User Reached more than 3 bugs in short time
+30.7.2025, 23:04:25 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 23:04:42 - DEBUG - Requested Bug - EHJzG - Full Requested Bug: {"_id":"EHJzG","title":"User profile image not loading","description":"Profile pictures appear as broken links","severity":2,"createdAt":1542108359454,"labels":["ui","images","profile"]}
+30.7.2025, 23:04:45 - DEBUG - Requested Bug - rxEiS - Full Requested Bug: {"_id":"rxEiS","title":"Payment processing fails - Test","description":"Credit card transactions timeout after 30 seconds - Test","severity":3,"createdAt":1542109359454,"labels":["payment","timeout","critical"]}
+30.7.2025, 23:04:47 - DEBUG - Requested Bug - B2m8N - Full Requested Bug: {"_id":"B2m8N","title":"Database connection timeout","description":"Connection to database fails after 30 seconds of inactivity","severity":1,"createdAt":1542111359454,"labels":["database","timeout","critical","backend"]}
