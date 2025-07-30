@@ -19,12 +19,5 @@
     "description": "Credit card transactions timeout after 30 seconds - Test",
     "severity": 3,
     "createdAt": 1542109359454
-  },
-  {
-    "title": "Lior Test",
-    "description": "test",
-    "severity": 2,
-    "createdAt": 1753899327238,
-    "_id": "mfASt"
   }
 ]

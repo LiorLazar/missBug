@@ -81,20 +81,19 @@ app.get('/api/bug/:bugId', (req, res) => {
             res.status(400).send('Cannot get bug')
         })
 })
-//* Remive / Delete
+//* Remove / Delete
+app.delete('/api/bug/:bugId', (req, res) => {
+    const { bugId } = req.params
+    bugService.remove(bugId)
+        .then(bug => {
+            res.send(`Bug removed - ${bugId}`)
+            loggerService.debug(`Bug ${bugId} has been removed successfully.`)
+        })
+        .catch(err => {
+            loggerService.error(`Cannot remove bug: `, err)
+            res.status(400).send('Cannot remove bug')
+        })
+})
 
-// app.get('/api/bug/:bugId/remove', (req, res) => {
-//     const bugId = req.params.bugId
-//     console.log(bugId)
-
-//     bugService.remove(bugId)
-//         .then(() => res.send(`bug ${bugId} deleted`))
-//         .catch(err => {
-//             loggerService.error(err)
-//             res.status(400).send(err)
-//         })
-// })
-
-// App Settings
 const port = 3030
 app.listen(port, () => loggerService.info(`Server listening on port https://127.0.0.1:${port}/`))
