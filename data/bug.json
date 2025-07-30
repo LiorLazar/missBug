@@ -19,12 +19,5 @@
     "description": "Credit card transactions timeout after 30 seconds",
     "severity": 1,
     "createdAt": 1542109359454
-  },
-  {
-    "_id": "NLFiQ",
-    "title": "Bug 1753303914295",
-    "description": "undefined",
-    "severity": 3,
-    "createdAt": null
   }
 ]

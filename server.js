@@ -8,14 +8,25 @@ import { loggerService } from './services/logger.service.js'
 const app = express()
 app.use(express.static('public'))
 app.use(cookieParser())
+app.use(express.json())
 
 //* Express Routing:
-app.get('/', (req, res) => res.send('Hello there'))
-
+//* Read
 app.get('/api/bug', (req, res) => {
-    bugService.query()
+    const filterBy = {
+        txt: req.params.txt,
+        minSeverity: +req.params.minSeverity
+    }
+
+    bugService.query(filterBy)
         .then(bugs => res.send(bugs))
+        .catch(err => {
+            loggerService.error('Cannot get cars', err)
+            res.status(400).send('Cannot load cars')
+        })
 })
+
+//* Create
 
 app.get('/api/bug/save', (req, res) => {
     const { _id, title, description, severity, createdAt } = req.query
@@ -34,6 +45,13 @@ app.get('/api/bug/save', (req, res) => {
             res.status(400).send(err)
         })
 })
+
+//* Update
+
+//* Get / Read By ID
+
+//* Remive / Delete
+
 
 app.get('/api/bug/:bugId', (req, res) => {
     const bugId = req.params.bugId
