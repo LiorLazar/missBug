@@ -81,6 +81,19 @@ app.get('/api/bug/:bugId', (req, res) => {
     const { bugId } = req.params
     bugService.getById(bugId)
         .then(bug => {
+            var visitedBugs = req.cookies.visitedBugs || []
+
+            if (!visitedBugs.includes(bugId)) {
+                visitedBugs.push(bugId)
+
+                if (visitedBugs.length > 3) {
+                    loggerService.error('User Reached more than 3 bugs in short time')
+                    return res.status(401).send('Wait for a bit')
+                }
+
+                res.cookie('visitedBugs', visitedBugs, { maxAge: 1000 * 7 })
+            }
+
             res.send(bug)
             loggerService.debug(`Requested Bug - ${bug._id} - Full Requested Bug: ${JSON.stringify(bug)}`)
         })
