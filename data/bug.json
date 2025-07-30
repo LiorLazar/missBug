@@ -15,9 +15,9 @@
   },
   {
     "_id": "rxEiS",
-    "title": "Payment processing fails",
-    "description": "Credit card transactions timeout after 30 seconds",
-    "severity": 1,
+    "title": "Payment processing fails - Test",
+    "description": "Credit card transactions timeout after 30 seconds - Test",
+    "severity": 3,
     "createdAt": 1542109359454
   },
   {

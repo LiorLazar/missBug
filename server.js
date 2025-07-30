@@ -27,7 +27,6 @@ app.get('/api/bug', (req, res) => {
 })
 
 //* Create
-
 app.post('/api/bug', (req, res) => {
     // const { _id, title, description, severity, createdAt } = req.query
     const bugToSave = {
@@ -49,34 +48,41 @@ app.post('/api/bug', (req, res) => {
 })
 
 //* Update
+app.put('/api/bug/:bugId', (req, res) => {
+    const bugToSave = {
+        _id: req.body._id,
+        title: req.body.title,
+        description: req.body.description,
+        severity: +req.body.severity,
+        createdAt: +req.body.createdAt
+    }
+
+    bugService.save(bugToSave)
+        .then(bug => {
+            res.send(bug)
+            loggerService.debug(`Updated Bug ${bug._id} - ${bug}`)
+        })
+        .catch(err => {
+            loggerService.error('cannot update bug', err)
+            res.status(400).send('Cannot update bug')
+        })
+})
 
 //* Get / Read By ID
 
 //* Remive / Delete
 
+// app.get('/api/bug/:bugId/remove', (req, res) => {
+//     const bugId = req.params.bugId
+//     console.log(bugId)
 
-app.get('/api/bug/:bugId', (req, res) => {
-    const bugId = req.params.bugId
-
-    bugService.getById(bugId)
-        .then(bug => res.send(bug))
-        .catch(err => {
-            loggerService.error(err)
-            res.status(400).send(err)
-        })
-})
-
-app.get('/api/bug/:bugId/remove', (req, res) => {
-    const bugId = req.params.bugId
-    console.log(bugId)
-
-    bugService.remove(bugId)
-        .then(() => res.send(`bug ${bugId} deleted`))
-        .catch(err => {
-            loggerService.error(err)
-            res.status(400).send(err)
-        })
-})
+//     bugService.remove(bugId)
+//         .then(() => res.send(`bug ${bugId} deleted`))
+//         .catch(err => {
+//             loggerService.error(err)
+//             res.status(400).send(err)
+//         })
+// })
 
 // App Settings
 const port = 3030
