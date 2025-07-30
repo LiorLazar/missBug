@@ -23,6 +23,10 @@ function query(filterBy = {}) {
         bugsToDisplay = bugsToDisplay.filter(bug => bug.severity >= filterBy.minSeverity)
     }
 
+    if (filterBy.labels) {
+        bugsToDisplay = bugsToDisplay.filter(bug => bug.labels.includes(filterBy.labels))
+    }
+
     if (filterBy.sortBy) {
         const dir = filterBy.sortDir
         if (filterBy.sortBy === 'title') bugsToDisplay.sort((b1, b2) => b1.title.localeCompare(b2.title) * dir)
