@@ -1,12 +1,15 @@
 import express from 'express'
+import cookieParser from 'cookie-parser'
+
 import { bugService } from './services/bug.service.js'
 import { loggerService } from './services/logger.service.js'
 
-// App Init
+//* Express Config:
 const app = express()
 app.use(express.static('public'))
+app.use(cookieParser())
 
-// App Routing
+//* Express Routing:
 app.get('/', (req, res) => res.send('Hello there'))
 
 app.get('/api/bug', (req, res) => {
