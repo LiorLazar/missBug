@@ -2,6 +2,7 @@ import { loggerService } from "./logger.service.js";
 import { makeId, readJsonFile, writeJsonFile } from "./util.service.js";
 
 const bugs = readJsonFile('./data/bug.json')
+const PAGE_SIZE = 3
 
 export const bugService = {
     query,
@@ -28,6 +29,11 @@ function query(filterBy = {}) {
         if (filterBy.sortBy === 'description') bugsToDisplay.sort((b1, b2) => b1.description.localeCompare(b2.description) * dir)
         if (filterBy.sortBy === 'severity') bugsToDisplay.sort((b1, b2) => b1.severity - b2.severity * dir)
         if (filterBy.sortBy === 'createdAt') bugsToDisplay.sort((b1, b2) => b1.createdAt - b2.createdAt * dir)
+    }
+
+    if (filterBy.pageIdx !== undefined) {
+        const startIdx = filterBy.pageIdx * PAGE_SIZE
+        bugsToDisplay = bugsToDisplay.slice(startIdx, startIdx + PAGE_SIZE)
     }
 
     return Promise.resolve(bugsToDisplay)
