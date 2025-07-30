@@ -155,3 +155,45 @@
 30.7.2025, 21:26:43 - INFO - Server listening on port https://127.0.0.1:3030/
 30.7.2025, 21:27:10 - INFO - Server listening on port https://127.0.0.1:3030/
 30.7.2025, 21:27:12 - DEBUG - Updated Bug rxEiS - [object Object]
+30.7.2025, 21:28:09 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:28:26 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:28:42 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:28:48 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:28:52 - DEBUG - Updated Bug rxEiS - {"_id":"rxEiS","title":"Payment processing fails - Test","description":"Credit card transactions timeout after 30 seconds - Test","severity":3,"createdAt":1542109359454}
+30.7.2025, 21:29:26 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:29:29 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:29:40 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:29:49 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:29:55 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:29:59 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:30:19 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:30:22 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:30:32 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:30:38 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:30:38 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:30:44 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:30:48 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:30:53 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:30:57 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:31:03 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:31:19 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:31:22 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:31:22 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:31:24 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:31:30 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:31:31 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:31:38 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:31:44 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:34:04 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:34:49 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:34:54 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:34:56 - DEBUG - Requested Bug - U3Feb - Full Requested Bug: {"_id":"U3Feb","title":"Cannot save a new car","description":"problem when clicking Save","severity":3,"createdAt":1542107359454}
+30.7.2025, 21:35:22 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:35:25 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:35:34 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:36:32 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:36:40 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:36:41 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:36:46 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 21:36:48 - ERROR - Couldnt find bug U3Feb11 in bugService
+30.7.2025, 21:36:48 - ERROR - Cannot get bug with ID: U3Feb11:  | Couldnt find bug

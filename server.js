@@ -60,7 +60,7 @@ app.put('/api/bug/:bugId', (req, res) => {
     bugService.save(bugToSave)
         .then(bug => {
             res.send(bug)
-            loggerService.debug(`Updated Bug ${bug._id} - ${bug}`)
+            loggerService.debug(`Updated Bug ${bug._id} - ${JSON.stringify(bug)}`)
         })
         .catch(err => {
             loggerService.error('cannot update bug', err)
@@ -69,7 +69,18 @@ app.put('/api/bug/:bugId', (req, res) => {
 })
 
 //* Get / Read By ID
-
+app.get('/api/bug/:bugId', (req, res) => {
+    const { bugId } = req.params
+    bugService.getById(bugId)
+        .then(bug => {
+            res.send(bug)
+            loggerService.debug(`Requested Bug - ${bug._id} - Full Requested Bug: ${JSON.stringify(bug)}`)
+        })
+        .catch(err => {
+            loggerService.error(`Cannot get bug with ID: ${bugId}: `, err)
+            res.status(400).send('Cannot get bug')
+        })
+})
 //* Remive / Delete
 
 // app.get('/api/bug/:bugId/remove', (req, res) => {
