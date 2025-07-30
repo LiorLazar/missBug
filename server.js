@@ -1,3 +1,5 @@
+import path from 'path'
+
 import express from 'express'
 import cookieParser from 'cookie-parser'
 
@@ -99,6 +101,11 @@ app.delete('/api/bug/:bugId', (req, res) => {
             loggerService.error(`Cannot remove bug: `, err)
             res.status(400).send('Cannot remove bug')
         })
+})
+
+//* Fallback route (For production or when using browser-router)
+app.get('/*all', (req, res) => {
+    res.sendFile(path.resolve('public/index.html'))
 })
 
 const port = 3030
