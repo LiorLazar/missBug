@@ -110,12 +110,5 @@
       "audio",
       "minor"
     ]
-  },
-  {
-    "title": "Bug 1753903084463",
-    "description": "rrrr",
-    "severity": 3,
-    "createdAt": 1753903088947,
-    "_id": "rZpQB"
   }
 ]
