@@ -14,8 +14,10 @@ app.use(express.json())
 //* Read
 app.get('/api/bug', (req, res) => {
     const filterBy = {
-        txt: req.params.txt,
-        minSeverity: +req.params.minSeverity
+        txt: req.query.txt,
+        minSeverity: +req.query.minSeverity,
+        sortBy: req.query.sortBy,
+        sortDir: req.query.sortDir
     }
 
     bugService.query(filterBy)

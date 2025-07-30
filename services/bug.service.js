@@ -22,6 +22,14 @@ function query(filterBy = {}) {
         bugsToDisplay = bugsToDisplay.filter(bug => bug.severity >= filterBy.minSeverity)
     }
 
+    if (filterBy.sortBy) {
+        const dir = filterBy.sortDir
+        if (filterBy.sortBy === 'title') bugsToDisplay.sort((b1, b2) => b1.title.localeCompare(b2.title) * dir)
+        if (filterBy.sortBy === 'description') bugsToDisplay.sort((b1, b2) => b1.description.localeCompare(b2.description) * dir)
+        if (filterBy.sortBy === 'severity') bugsToDisplay.sort((b1, b2) => b1.severity - b2.severity * dir)
+        if (filterBy.sortBy === 'createdAt') bugsToDisplay.sort((b1, b2) => b1.createdAt - b2.createdAt * dir)
+    }
+
     return Promise.resolve(bugsToDisplay)
 }
 
