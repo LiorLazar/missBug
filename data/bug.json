@@ -15,16 +15,9 @@
   },
   {
     "_id": "rxEiS",
-    "title": "Payment processing fails",
-    "description": "Credit card transactions timeout after 30 seconds",
-    "severity": 1,
-    "createdAt": 1542109359454
-  },
-  {
-    "_id": "NLFiQ",
-    "title": "Bug 1753303914295",
-    "description": "undefined",
+    "title": "Payment processing fails - Test",
+    "description": "Credit card transactions timeout after 30 seconds - Test",
     "severity": 3,
-    "createdAt": null
+    "createdAt": 1542109359454
   }
 ]
