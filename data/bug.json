@@ -1,17 +1,5 @@
 [
   {
-    "_id": "U3Feb",
-    "title": "Cannot save a new car",
-    "description": "problem when clicking Save",
-    "severity": 3,
-    "createdAt": 1542107359454,
-    "labels": [
-      "ui",
-      "save",
-      "forms"
-    ]
-  },
-  {
     "_id": "EHJzG",
     "title": "User profile image not loading",
     "description": "Profile pictures appear as broken links",
@@ -122,5 +110,12 @@
       "audio",
       "minor"
     ]
+  },
+  {
+    "title": "Bug 1753903084463",
+    "description": "rrrr",
+    "severity": 3,
+    "createdAt": 1753903088947,
+    "_id": "rZpQB"
   }
 ]

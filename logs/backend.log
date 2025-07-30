@@ -298,3 +298,31 @@
 30.7.2025, 22:10:42 - INFO - Server listening on port https://127.0.0.1:3030/
 30.7.2025, 22:10:42 - INFO - Server listening on port https://127.0.0.1:3030/
 30.7.2025, 22:10:47 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:14:48 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:14:56 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:15:02 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:15:08 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:15:14 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:15:16 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:15:17 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:15:32 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:15:43 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:15:46 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:15:49 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:15:50 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:15:56 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:16:03 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:16:05 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:16:08 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:16:13 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:16:20 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:16:25 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:16:32 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:16:36 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:16:40 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:16:41 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:16:44 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:16:50 - INFO - Server listening on port https://127.0.0.1:3030/
+30.7.2025, 22:17:35 - DEBUG - Requested Bug - U3Feb - Full Requested Bug: {"_id":"U3Feb","title":"Cannot save a new car","description":"problem when clicking Save","severity":3,"createdAt":1542107359454,"labels":["ui","save","forms"]}
+30.7.2025, 22:17:42 - DEBUG - Bug U3Feb has been removed successfully.
+30.7.2025, 22:18:08 - DEBUG - Created Bug: | {"title":"Bug 1753903084463","description":"rrrr","severity":3,"createdAt":1753903088947,"_id":"rZpQB"}
