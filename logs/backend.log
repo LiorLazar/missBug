@@ -418,3 +418,85 @@
 30.7.2025, 23:04:42 - DEBUG - Requested Bug - EHJzG - Full Requested Bug: {"_id":"EHJzG","title":"User profile image not loading","description":"Profile pictures appear as broken links","severity":2,"createdAt":1542108359454,"labels":["ui","images","profile"]}
 30.7.2025, 23:04:45 - DEBUG - Requested Bug - rxEiS - Full Requested Bug: {"_id":"rxEiS","title":"Payment processing fails - Test","description":"Credit card transactions timeout after 30 seconds - Test","severity":3,"createdAt":1542109359454,"labels":["payment","timeout","critical"]}
 30.7.2025, 23:04:47 - DEBUG - Requested Bug - B2m8N - Full Requested Bug: {"_id":"B2m8N","title":"Database connection timeout","description":"Connection to database fails after 30 seconds of inactivity","severity":1,"createdAt":1542111359454,"labels":["database","timeout","critical","backend"]}
+31.7.2025, 13:34:04 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:35:04 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:35:04 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:37:08 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:37:08 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:45:20 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:45:20 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:45:20 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:45:20 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:46:03 - DEBUG - Requested Bug - EHJzG - Full Requested Bug: {"_id":"EHJzG","title":"User profile image not loading","description":"Profile pictures appear as broken links","severity":2,"createdAt":1542108359454,"labels":["ui","images","profile"]}
+31.7.2025, 13:46:06 - DEBUG - Requested Bug - rxEiS - Full Requested Bug: {"_id":"rxEiS","title":"Payment processing fails - Test","description":"Credit card transactions timeout after 30 seconds - Test","severity":3,"createdAt":1542109359454,"labels":["payment","timeout","critical"]}
+31.7.2025, 13:46:09 - DEBUG - Requested Bug - A7k9L - Full Requested Bug: {"_id":"A7k9L","title":"Login form validation error","description":"Email validation accepts invalid email formats","severity":2,"createdAt":1542110359454,"labels":["authentication","validation","forms"]}
+31.7.2025, 13:46:11 - ERROR - User Reached more than 3 bugs in short time
+31.7.2025, 13:47:45 - DEBUG - Requested Bug - EHJzG - Full Requested Bug: {"_id":"EHJzG","title":"User profile image not loading","description":"Profile pictures appear as broken links","severity":2,"createdAt":1542108359454,"labels":["ui","images","profile"]}
+31.7.2025, 13:47:47 - DEBUG - Requested Bug - rxEiS - Full Requested Bug: {"_id":"rxEiS","title":"Payment processing fails - Test","description":"Credit card transactions timeout after 30 seconds - Test","severity":3,"createdAt":1542109359454,"labels":["payment","timeout","critical"]}
+31.7.2025, 13:47:49 - DEBUG - Requested Bug - A7k9L - Full Requested Bug: {"_id":"A7k9L","title":"Login form validation error","description":"Email validation accepts invalid email formats","severity":2,"createdAt":1542110359454,"labels":["authentication","validation","forms"]}
+31.7.2025, 13:47:56 - ERROR - User Reached more than 3 bugs in short time
+31.7.2025, 13:52:00 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:52:00 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:52:05 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:52:05 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:52:35 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:52:35 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:52:59 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:52:59 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:04 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:04 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:09 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:09 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:12 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:12 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:16 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:16 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:18 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:18 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:22 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:22 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:23 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:23 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:35 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:35 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:41 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:41 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:42 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:42 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:47 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:47 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:49 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:49 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:52 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:53:52 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:54:14 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:54:14 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:54:16 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:54:16 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:54:19 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:54:19 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:54:44 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:55:22 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:55:22 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:55:26 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:55:26 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:55:47 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:56:04 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:56:04 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:56:16 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:56:16 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:57:50 - DEBUG - Bug rxEiS has been removed successfully.
+31.7.2025, 13:59:35 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 13:59:53 - DEBUG - Updated Bug EHJzG - {"_id":"EHJzG","title":"User profile image not loading","description":"Profile pictures appear as broken links","severity":3,"createdAt":1542108359454,"labels":["ui","images","profile"]}
+31.7.2025, 14:00:07 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 14:00:07 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 14:00:08 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 14:00:08 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 14:00:12 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 14:00:12 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 14:00:39 - DEBUG - Created Bug: | {"title":"Bug 1753959625442","description":"test","severity":3,"createdAt":1753959639206,"labels":["ui","bug"],"_id":"kK8kp"}
+31.7.2025, 14:00:48 - DEBUG - Requested Bug - kK8kp - Full Requested Bug: {"title":"Bug 1753959625442","description":"test","severity":3,"createdAt":1753959639206,"labels":["ui","bug"],"_id":"kK8kp"}
+31.7.2025, 14:01:23 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 14:01:23 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 14:01:34 - INFO - Server listening on port https://127.0.0.1:3030/
+31.7.2025, 14:01:34 - INFO - Server listening on port https://127.0.0.1:3030/

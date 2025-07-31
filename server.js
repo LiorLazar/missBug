@@ -11,10 +11,12 @@ const app = express()
 app.use(express.static('public'))
 app.use(cookieParser())
 app.use(express.json())
+app.set('query parser', 'extended')
 
 //* Express Routing:
 //* Read
 app.get('/api/bug', (req, res) => {
+    console.log(req.query)
     const filterBy = {
         txt: req.query.txt,
         minSeverity: +req.query.minSeverity,
@@ -55,7 +57,7 @@ app.post('/api/bug', (req, res) => {
 })
 
 //* Update
-app.put('/api/bug/:bugId', (req, res) => {
+app.put('/api/bug', (req, res) => {
     const bugToSave = {
         _id: req.body._id,
         title: req.body.title,
@@ -106,7 +108,7 @@ app.get('/api/bug/:bugId', (req, res) => {
 app.delete('/api/bug/:bugId', (req, res) => {
     const { bugId } = req.params
     bugService.remove(bugId)
-        .then(bug => {
+        .then(() => {
             res.send(`Bug removed - ${bugId}`)
             loggerService.debug(`Bug ${bugId} has been removed successfully.`)
         })

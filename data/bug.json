@@ -3,24 +3,12 @@
     "_id": "EHJzG",
     "title": "User profile image not loading",
     "description": "Profile pictures appear as broken links",
-    "severity": 2,
+    "severity": 3,
     "createdAt": 1542108359454,
     "labels": [
       "ui",
       "images",
       "profile"
-    ]
-  },
-  {
-    "_id": "rxEiS",
-    "title": "Payment processing fails - Test",
-    "description": "Credit card transactions timeout after 30 seconds - Test",
-    "severity": 3,
-    "createdAt": 1542109359454,
-    "labels": [
-      "payment",
-      "timeout",
-      "critical"
     ]
   },
   {
@@ -132,5 +120,16 @@
       "bug"
     ],
     "_id": "2Udek"
+  },
+  {
+    "title": "Bug 1753959625442",
+    "description": "test",
+    "severity": 3,
+    "createdAt": 1753959639206,
+    "labels": [
+      "ui",
+      "bug"
+    ],
+    "_id": "kK8kp"
   }
 ]
