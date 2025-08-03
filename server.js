@@ -17,12 +17,13 @@ app.set('query parser', 'extended')
 //* Read
 app.get('/api/bug', (req, res) => {
     console.log(req.query)
+    const { txt, sortBy, sortDir, pageidx } = req.query
     const filterBy = {
-        txt: req.query.txt,
-        minSeverity: +req.query.minSeverity,
+        txt: txt || '',
+        minSeverity: +req.query.minSeverity || 0,
         sortBy: req.query.sortBy,
-        sortDir: req.query.sortDir,
-        pageIdx: req.query.pageIdx,
+        sortDir: req.query.sortDir || 1,
+        pageIdx: req.query.pageIdx || 0,
         labels: req.query.labels
     }
 
