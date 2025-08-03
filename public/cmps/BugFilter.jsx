@@ -1,6 +1,6 @@
 const { useState, useEffect } = React
 
-export function BugFilter({ filterBy, onSetFilterBy }) {
+export function BugFilter({ filterBy, onSetFilterBy, labels: labelsList }) {
 
     const [filterByToEdit, setFilterByToEdit] = useState(filterBy)
 
@@ -20,6 +20,10 @@ export function BugFilter({ filterBy, onSetFilterBy }) {
 
             case 'checkbox':
                 value = target.checked
+                break
+
+            case 'select-multiple':
+                value = Array.from(target.selectedOptions, option => option.value)
                 break
 
             default:
@@ -46,7 +50,19 @@ export function BugFilter({ filterBy, onSetFilterBy }) {
                 <input value={minSeverity} onChange={handleChange} type="number" placeholder="By Min Severity" id="minSeverity" name="minSeverity" />
 
                 <label htmlFor="labels">Label:</label>
-                <input value={labels} onChange={handleChange} type="text" placeholder="By Label" id="labels" name="labels" />
+                <select
+                    className="labels"
+                    name="labels"
+                    id="labels"
+                    value={labels || []}
+                    onChange={handleChange}
+                    multiple={true}
+                >
+                    {Array.isArray(labelsList) && labelsList.map(label => (
+                        <option key={label} value={label}>{label}</option>
+                    ))}
+                </select>
+                {/* <input value={labelsList} onChange={handleChange} type="text" placeholder="By Label" id="labels" name="labels" /> */}
             </form>
         </section>
     )
