@@ -51,6 +51,7 @@ export function BugFilter({ filterBy, onSetFilterBy, labels: labelsList }) {
 
                 <label htmlFor="labels">Label:</label>
                 <select
+                    className="labels"
                     name="labels"
                     id="labels"
                     value={labels || []}
