@@ -24,7 +24,7 @@ function query(filterBy = {}) {
     }
 
     if (filterBy.labels) {
-        bugsToDisplay = bugsToDisplay.filter(bug => bug.labels.includes(filterBy.labels))
+        bugsToDisplay = bugsToDisplay.filter(bug => bug.labels.some(label => filterBy.labels.includes(label)))
     }
 
     if (filterBy.sortBy) {
