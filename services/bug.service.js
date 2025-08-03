@@ -9,6 +9,7 @@ export const bugService = {
     getById,
     remove,
     save,
+    getLabels
 }
 
 function query(filterBy = {}) {
@@ -87,4 +88,11 @@ function save(bugToSave) {
     }
     return _saveBugs()
         .then(() => bugToSave)
+}
+
+function getLabels() {
+    return query()
+        .then(bugs => {
+            return [...new Set(bugs.flatMap(bug => bug.labels))]
+        })
 }

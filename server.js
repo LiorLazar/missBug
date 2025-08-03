@@ -17,9 +17,8 @@ app.set('query parser', 'extended')
 //* Read
 app.get('/api/bug', (req, res) => {
     console.log(req.query)
-    const { txt, sortBy, sortDir, pageidx } = req.query
     const filterBy = {
-        txt: txt || '',
+        txt: req.query.txt || '',
         minSeverity: +req.query.minSeverity || 0,
         sortBy: req.query.sortBy,
         sortDir: req.query.sortDir || 1,
@@ -32,6 +31,20 @@ app.get('/api/bug', (req, res) => {
         .catch(err => {
             loggerService.error('Cannot get cars', err)
             res.status(400).send('Cannot load cars')
+        })
+})
+
+//* Read Labels
+app.get('/api/bug/labels', (req, res) => {
+
+    bugService.getLabels()
+        .then(labels => {
+            res.send(labels)
+            loggerService.debug('Requested Labels Passed Successfully.')
+        })
+        .catch(err => {
+            loggerService.error('Cannot get labels', err)
+            res.status(400).send('Cannot load labels')
         })
 })
 
