@@ -41,7 +41,6 @@ app.post('/api/bug', (req, res) => {
         title: req.body.title,
         description: req.body.description,
         severity: +req.body.severity,
-        createdAt: Date.now(),
         labels: req.body.labels,
     }
 

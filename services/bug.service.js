@@ -8,7 +8,7 @@ export const bugService = {
     query,
     getById,
     remove,
-    save
+    save,
 }
 
 function query(filterBy = {}) {
@@ -82,6 +82,7 @@ function save(bugToSave) {
         bugs.splice(idx, 1, bugToSave)
     } else {
         bugToSave._id = makeId()
+        bugToSave.createdAt = Date.now()
         bugs.push(bugToSave)
     }
     return _saveBugs()
