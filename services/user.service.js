@@ -30,7 +30,7 @@ function getById(userId) {
 }
 
 function getByUsername(username) {
-    var user = users.find(user => user.name === username)
+    var user = users.find(user => user.username === username)
     return Promise.resolve(user)
 }
 

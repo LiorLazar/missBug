@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser'
 import { bugService } from './services/bug.service.js'
 import { loggerService } from './services/logger.service.js'
 import { userService } from './services/user.service.js'
+import { authService } from './services/auth.service.js'
 
 //* Express Config:
 const app = express()
@@ -186,6 +187,54 @@ app.get('/api/user/:userId', (req, res) => {
             loggerService.error(`Cannot get user with ID: ${userId}:`, err)
             res.status(400).send('Cannot get user')
         })
+})
+
+////////////////////////////////////////////////////
+//* Auth API:
+//* Login
+app.post('/api/auth/login', (req, res) => {
+    const credentials = req.body
+
+    authService.checkLogin(credentials)
+        .then(user => {
+            const loginToken = authService.getLoginToken(user)
+            res.cookie('loginToken', loginToken)
+            res.send(user)
+            loggerService.debug(`User ${user.username} with ID ${user._id} has connected successfully.`)
+        })
+        .catch(err => {
+            res.status(400).send('Invalid Credentials')
+            loggerService.error(`Invalid Credentials`, err)
+        })
+})
+
+//* Signup
+app.post('/api/auth/signup', (req, res) => {
+    const credentials = req.body
+
+    userService.add(credentials)
+        .then(user => {
+            if (user) {
+                const loginToken = authService.getLoginToken(user)
+                res.cookie('loginToken', loginToken)
+                res.send(user)
+                loggerService.debug(`User ${user.username} with ID ${user._id} has registed and connected successfully.`)
+            }
+            else {
+                res.status(400).send('Cannot signup')
+                loggerService.error('User Tried to sign up with exsiting user.')
+            }
+        })
+        .catch(err => {
+            res.status(400).send('username taken')
+            loggerService.error('User Tried to sign up with exsiting user.', err)
+        })
+})
+
+//* Logout
+app.post('/api/auth/logout', (req, res) => {
+    res.clearCookie('loginToken')
+    res.send('logged out')
 })
 
 //* Fallback route (For production or when using browser-router)
