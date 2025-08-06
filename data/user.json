@@ -1,10 +1,16 @@
 [
-    {
-        "_id": "u101",
-        "username": "lior",
-        "fullname": "Lior Lazar",
-        "password": "1234",
-        "score": 100,
-        "isAdmin": true
-    }
+  {
+    "_id": "u101",
+    "username": "lior",
+    "fullname": "Lior Lazar",
+    "password": "1234",
+    "score": 100,
+    "isAdmin": true
+  },
+  {
+    "username": "liorl",
+    "password": "1234",
+    "fullname": "Lior La",
+    "_id": "8j3KoI"
+  }
 ]
