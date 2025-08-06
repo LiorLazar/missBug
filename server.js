@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser'
 
 import { bugService } from './services/bug.service.js'
 import { loggerService } from './services/logger.service.js'
+import { userService } from './services/user.service.js'
 
 //* Express Config:
 const app = express()
@@ -13,7 +14,9 @@ app.use(cookieParser())
 app.use(express.json())
 app.set('query parser', 'extended')
 
+////////////////////////////////////////////////////
 //* Express Routing:
+//* Bug API:
 //* Read
 app.get('/api/bug', (req, res) => {
     console.log(req.query)
@@ -151,6 +154,37 @@ app.delete('/api/bug/:bugId', (req, res) => {
         .catch(err => {
             loggerService.error(`Cannot remove bug: `, err)
             res.status(400).send('Cannot remove bug')
+        })
+})
+
+////////////////////////////////////////////////////
+
+//* User API
+//* Read:
+app.get('/api/user', (req, res) => {
+    userService.query()
+        .then(users => {
+            res.send(users)
+            loggerService.debug('Users Queried Successfully')
+        })
+        .catch(err => {
+            loggerService.error('Cannot get users', err)
+            res.status(400).send('Cannot get users')
+        })
+
+})
+
+//* Get By ID:
+app.get('/api/user/:userId', (req, res) => {
+    const { userId } = req.params
+    userService.getById(userId)
+        .then(user => {
+            res.send(user)
+            loggerService.debug(`Requested User - ${user._id} - Full Requested User: ${JSON.stringify(user)}`)
+        })
+        .catch(err => {
+            loggerService.error(`Cannot get user with ID: ${userId}:`, err)
+            res.status(400).send('Cannot get user')
         })
 })
 
