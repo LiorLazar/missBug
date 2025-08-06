@@ -10,22 +10,15 @@ export function BugIndex() {
     const [bugs, setBugs] = useState(null)
     const [filterBy, setFilterBy] = useState(bugService.getDefaultFilter())
     const [labels, setLabels] = useState([])
-    const [sortFields, setSortFields] = useState([])
 
     useEffect(() => {
         loadBugs()
         loadLabels()
-        loadSortFields()
     }, [filterBy])
 
     function loadLabels() {
         bugService.getLabels()
             .then(setLabels)
-    }
-
-    function loadSortFields() {
-        bugService.getSortFields()
-            .then(setSortFields)
     }
 
     function loadBugs() {
@@ -106,7 +99,7 @@ export function BugIndex() {
 
     return <section className="bug-index main-content">
 
-        <BugFilter filterBy={filterBy} onSetFilterBy={onSetFilterBy} labels={labels} sortFields={sortFields} />
+        <BugFilter filterBy={filterBy} onSetFilterBy={onSetFilterBy} labels={labels} />
         <header>
             <h3>Bug List</h3>
             <button onClick={onAddBug}>Add Bug</button>

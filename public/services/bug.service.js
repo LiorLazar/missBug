@@ -32,7 +32,7 @@ function save(bug) {
 
 
 function getDefaultFilter() {
-    return { txt: '', minSeverity: 0 }
+    return { txt: '', minSeverity: 0, sortBy: { sortField: '', sortDir: 1 } }
 }
 
 function getLabels() {

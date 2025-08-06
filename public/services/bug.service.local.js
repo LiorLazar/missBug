@@ -26,6 +26,22 @@ function query(filterBy) {
                 bugs = bugs.filter(bug => bug.severity >= filterBy.minSeverity)
             }
 
+            // Add sorting logic
+            if (filterBy.sortBy && filterBy.sortBy.sortField) {
+                const { sortField, sortDir } = filterBy.sortBy
+                const dir = sortDir || 1
+
+                if (sortField === 'title') {
+                    bugs.sort((b1, b2) => b1.title.localeCompare(b2.title) * dir)
+                } else if (sortField === 'description') {
+                    bugs.sort((b1, b2) => b1.description.localeCompare(b2.description) * dir)
+                } else if (sortField === 'severity') {
+                    bugs.sort((b1, b2) => (b1.severity - b2.severity) * dir)
+                } else if (sortField === 'createdAt') {
+                    bugs.sort((b1, b2) => (b1.createdAt - b2.createdAt) * dir)
+                }
+            }
+
             return bugs
         })
 }
@@ -80,5 +96,9 @@ function _createBugs() {
 }
 
 function getDefaultFilter() {
-    return { txt: '', minSeverity: 0 }
+    return {
+        txt: '',
+        minSeverity: 0,
+        sortBy: null
+    }
 }

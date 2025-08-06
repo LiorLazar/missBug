@@ -30,10 +30,8 @@ function query(filterBy = {}) {
     }
 
     if (filterBy.sortBy) {
-        const isDesc = filterBy.sortBy.startsWith('-')
-        const sortField = isDesc ? filterBy.sortBy.slice(1) : filterBy.sortBy
-        const dir = isDesc ? -1 : 1
-
+        const { sortField, sortDir } = filterBy.sortBy
+        const dir = sortDir || 1
         if (sortField === 'title') {
             bugsToDisplay.sort((b1, b2) => b1.title.localeCompare(b2.title) * dir)
         } else if (sortField === 'description') {
