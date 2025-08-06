@@ -48,6 +48,19 @@ app.get('/api/bug/labels', (req, res) => {
         })
 })
 
+//* Read SortFields
+app.get('/api/bug/sortFields', (req, res) => {
+    bugService.getSortFields()
+        .then(fields => {
+            res.send(fields)
+            loggerService.debug('Requested sortFields Passed Successfully.')
+        })
+        .catch(err => {
+            loggerService.error('Cannot get sortFields', err)
+            res.status(400).send('Cannot load sortFields')
+        })
+})
+
 //* Create
 app.post('/api/bug', (req, res) => {
     // const { _id, title, description, severity, createdAt } = req.query

@@ -6,7 +6,8 @@ export const bugService = {
     save,
     remove,
     getDefaultFilter,
-    getLabels
+    getLabels,
+    getSortFields
 }
 
 function query(filterBy = {}) {
@@ -36,5 +37,10 @@ function getDefaultFilter() {
 
 function getLabels() {
     return axios.get(BASE_URL + 'labels')
+        .then(res => res.data)
+}
+
+function getSortFields() {
+    return axios.get(BASE_URL + 'sortFields')
         .then(res => res.data)
 }

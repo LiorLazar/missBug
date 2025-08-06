@@ -9,16 +9,23 @@ import { BugList } from '../cmps/BugList.jsx'
 export function BugIndex() {
     const [bugs, setBugs] = useState(null)
     const [filterBy, setFilterBy] = useState(bugService.getDefaultFilter())
-    const [labels, setLabels] = useState(bugService.getLabels())
+    const [labels, setLabels] = useState([])
+    const [sortFields, setSortFields] = useState([])
 
     useEffect(() => {
         loadBugs()
         loadLabels()
+        loadSortFields()
     }, [filterBy])
 
     function loadLabels() {
         bugService.getLabels()
             .then(setLabels)
+    }
+
+    function loadSortFields() {
+        bugService.getSortFields()
+            .then(setSortFields)
     }
 
     function loadBugs() {
@@ -99,7 +106,7 @@ export function BugIndex() {
 
     return <section className="bug-index main-content">
 
-        <BugFilter filterBy={filterBy} onSetFilterBy={onSetFilterBy} labels={labels} />
+        <BugFilter filterBy={filterBy} onSetFilterBy={onSetFilterBy} labels={labels} sortFields={sortFields} />
         <header>
             <h3>Bug List</h3>
             <button onClick={onAddBug}>Add Bug</button>

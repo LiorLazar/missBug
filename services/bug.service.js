@@ -9,7 +9,8 @@ export const bugService = {
     getById,
     remove,
     save,
-    getLabels
+    getLabels,
+    getSortFields
 }
 
 function query(filterBy = {}) {
@@ -29,11 +30,19 @@ function query(filterBy = {}) {
     }
 
     if (filterBy.sortBy) {
-        const dir = filterBy.sortDir
-        if (filterBy.sortBy === 'title') bugsToDisplay.sort((b1, b2) => b1.title.localeCompare(b2.title) * dir)
-        if (filterBy.sortBy === 'description') bugsToDisplay.sort((b1, b2) => b1.description.localeCompare(b2.description) * dir)
-        if (filterBy.sortBy === 'severity') bugsToDisplay.sort((b1, b2) => b1.severity - b2.severity * dir)
-        if (filterBy.sortBy === 'createdAt') bugsToDisplay.sort((b1, b2) => b1.createdAt - b2.createdAt * dir)
+        const isDesc = filterBy.sortBy.startsWith('-')
+        const sortField = isDesc ? filterBy.sortBy.slice(1) : filterBy.sortBy
+        const dir = isDesc ? -1 : 1
+
+        if (sortField === 'title') {
+            bugsToDisplay.sort((b1, b2) => b1.title.localeCompare(b2.title) * dir)
+        } else if (sortField === 'description') {
+            bugsToDisplay.sort((b1, b2) => b1.description.localeCompare(b2.description) * dir)
+        } else if (sortField === 'severity') {
+            bugsToDisplay.sort((b1, b2) => (b1.severity - b2.severity) * dir)
+        } else if (sortField === 'createdAt') {
+            bugsToDisplay.sort((b1, b2) => (b1.createdAt - b2.createdAt) * dir)
+        }
     }
 
     if (filterBy.pageIdx !== undefined) {
@@ -95,4 +104,13 @@ function getLabels() {
         .then(bugs => {
             return [...new Set(bugs.flatMap(bug => bug.labels))]
         })
+}
+
+function getSortFields() {
+    return Promise.resolve([
+        'title',
+        'description',
+        'severity',
+        'createdAt'
+    ])
 }

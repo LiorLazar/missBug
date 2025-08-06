@@ -1,6 +1,6 @@
 const { useState, useEffect } = React
 
-export function BugFilter({ filterBy, onSetFilterBy, labels: labelsList }) {
+export function BugFilter({ filterBy, onSetFilterBy, labels: labelsList, sortFields }) {
 
     const [filterByToEdit, setFilterByToEdit] = useState(filterBy)
 
@@ -38,7 +38,17 @@ export function BugFilter({ filterBy, onSetFilterBy, labels: labelsList }) {
         onSetFilterBy(filterByToEdit)
     }
 
-    const { txt, minSeverity, labels } = filterByToEdit
+    const { txt, minSeverity, labels, sortBy } = filterByToEdit
+
+    const sortOptions = [
+        { value: 'title', label: 'Title (A-Z)' },
+        { value: '-title', label: 'Title (Z-A)' },
+        { value: 'severity', label: 'Severity (Low-High)' },
+        { value: '-severity', label: 'Severity (High-Low)' },
+        { value: 'createdAt', label: 'Date (Oldest)' },
+        { value: '-createdAt', label: 'Date (Newest)' }
+    ]
+
     return (
         <section className="bug-filter">
             <h2>Filter</h2>
@@ -62,7 +72,21 @@ export function BugFilter({ filterBy, onSetFilterBy, labels: labelsList }) {
                         <option key={label} value={label}>{label}</option>
                     ))}
                 </select>
-                {/* <input value={labelsList} onChange={handleChange} type="text" placeholder="By Label" id="labels" name="labels" /> */}
+                <label htmlFor="sortBy">Sort By:</label>
+                <select
+                    className="sortBy"
+                    name="sortBy"
+                    id="sortBy"
+                    value={sortBy || ''}
+                    onChange={handleChange}
+                >
+                    <option value="">Select Sort Option</option>
+                    {sortOptions.map(option => (
+                        <option key={option.value} value={option.value}>
+                            {option.label}
+                        </option>
+                    ))}
+                </select>
             </form>
         </section>
     )
