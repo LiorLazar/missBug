@@ -78,7 +78,9 @@ app.get('/api/bug/sortFields', (req, res) => {
 
 //* Create
 app.post('/api/bug', (req, res) => {
-    // const { _id, title, description, severity, createdAt } = req.query
+    const loggedInUser = authService.validateToken(req.cookies.loginToken)
+    if (!loggedInUser) return res.status(400).send('Cannot add bug')
+
     const bugToSave = {
         title: req.body.title,
         description: req.body.description,
@@ -86,7 +88,7 @@ app.post('/api/bug', (req, res) => {
         labels: req.body.labels,
     }
 
-    bugService.save(bugToSave)
+    bugService.save(bugToSave, loggedInUser)
         .then(savedBug => {
             res.send(savedBug)
             loggerService.debug('Created Bug:', savedBug)
@@ -99,6 +101,9 @@ app.post('/api/bug', (req, res) => {
 
 //* Update
 app.put('/api/bug', (req, res) => {
+    const loggedInUser = authService.validateToken(req.cookies.loginToken)
+    if (!loggedInUser) return res.status(400).send('Cannot update bug')
+
     const bugToSave = {
         _id: req.body._id,
         title: req.body.title,
@@ -108,7 +113,7 @@ app.put('/api/bug', (req, res) => {
         labels: req.body.labels,
     }
 
-    bugService.save(bugToSave)
+    bugService.save(bugToSave, loggedInUser)
         .then(bug => {
             res.send(bug)
             loggerService.debug(`Updated Bug ${bug._id} - ${JSON.stringify(bug)}`)
@@ -147,6 +152,8 @@ app.get('/api/bug/:bugId', (req, res) => {
 })
 //* Remove / Delete
 app.delete('/api/bug/:bugId', (req, res) => {
+    const loggedinUser = authService.validateToken(req.cookies.loginToken)
+    if (!loggedinUser) return res.status(401).send('Cannot delete bug')
     const { bugId } = req.params
     bugService.remove(bugId)
         .then(() => {
