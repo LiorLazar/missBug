@@ -1,4 +1,6 @@
 const BASE_URL = '/api/auth/'
+const STORAGE_KEY_LOGGEDIN_USER = 'loggedInUser'
+
 
 export const authService = {
     login,

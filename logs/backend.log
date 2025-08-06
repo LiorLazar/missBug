@@ -13932,3 +13932,72 @@
 7.8.2025, 0:01:25 - INFO - Server listening on port https://127.0.0.1:3030/
 7.8.2025, 0:01:30 - INFO - Server listening on port https://127.0.0.1:3030/
 7.8.2025, 0:01:34 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:05:03 - DEBUG - Requested Labels Passed Successfully.
+7.8.2025, 0:05:03 - DEBUG - Requested Labels Passed Successfully.
+7.8.2025, 0:11:12 - DEBUG - Requested Labels Passed Successfully.
+7.8.2025, 0:11:12 - DEBUG - Requested Labels Passed Successfully.
+7.8.2025, 0:15:29 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:15:30 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:17:05 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:18:25 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:18:56 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:18:59 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:19:20 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:19:25 - ERROR - Invalid Credentials | 
+7.8.2025, 0:19:28 - ERROR - Invalid Credentials | 
+7.8.2025, 0:19:49 - DEBUG - User lior with ID u101 has connected successfully.
+7.8.2025, 0:19:49 - DEBUG - Requested Labels Passed Successfully.
+7.8.2025, 0:19:49 - DEBUG - Requested Labels Passed Successfully.
+7.8.2025, 0:27:16 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:27:32 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:29:02 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:29:10 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:29:12 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:29:18 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:29:19 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:29:31 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:29:33 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:29:39 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:29:44 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:30:44 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:34:26 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:36:01 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:36:21 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:38:05 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:43:43 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:44:20 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:44:25 - DEBUG - Requested Bug - B2m8N - Full Requested Bug: {"_id":"B2m8N","title":"Database connection timeout","description":"Connection to database fails after 30 seconds of inactivity","severity":1,"createdAt":1542111359454,"labels":["database","timeout","critical","backend"]}
+7.8.2025, 0:44:26 - DEBUG - Requested Labels Passed Successfully.
+7.8.2025, 0:44:26 - DEBUG - Requested Labels Passed Successfully.
+7.8.2025, 0:44:32 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:44:46 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:47:28 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:47:39 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:47:47 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:48:02 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:48:49 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:49:06 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:49:10 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:49:43 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:49:46 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:49:47 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:50:01 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:50:02 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:51:08 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:51:15 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:52:20 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:52:24 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:52:27 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:53:03 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:53:30 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:53:47 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:53:54 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:56:19 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:56:29 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:56:43 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:56:48 - DEBUG - Requested User - u101 - Full Requested User: {"_id":"u101","username":"lior","fullname":"Lior Lazar","password":"1234","score":100,"isAdmin":true}
+7.8.2025, 0:57:09 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:57:12 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:57:16 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:57:22 - INFO - Server listening on port https://127.0.0.1:3030/
+7.8.2025, 0:57:24 - INFO - Server listening on port https://127.0.0.1:3030/

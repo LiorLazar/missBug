@@ -29,6 +29,10 @@ function query(filterBy = {}) {
         bugsToDisplay = bugsToDisplay.filter(bug => bug.labels.some(label => filterBy.labels.includes(label)))
     }
 
+    if (filterBy.ownerId) {
+        bugsToDisplay = bugsToDisplay.filter(bug => bug.creator && bug.creator._id === filterBy.ownerId)
+    }
+
     if (filterBy.sortBy) {
         const { sortField, sortDir } = filterBy.sortBy
         const dir = sortDir || 1
@@ -43,7 +47,7 @@ function query(filterBy = {}) {
         }
     }
 
-    if (filterBy.pageIdx !== undefined) {
+    if (filterBy.pageIdx !== undefined && filterBy.pageIdx !== null) {
         const startIdx = filterBy.pageIdx * PAGE_SIZE
         bugsToDisplay = bugsToDisplay.slice(startIdx, startIdx + PAGE_SIZE)
     }
@@ -98,10 +102,7 @@ function save(bugToSave) {
 }
 
 function getLabels() {
-    return query()
-        .then(bugs => {
-            return [...new Set(bugs.flatMap(bug => bug.labels))]
-        })
+    return Promise.resolve([...new Set(bugs.flatMap(bug => bug.labels))])
 }
 
 function getSortFields() {
