@@ -17,11 +17,21 @@ app.set('query parser', 'extended')
 //* Read
 app.get('/api/bug', (req, res) => {
     console.log(req.query)
+
+    // Parse sortBy if it's a JSON string
+    let sortBy = req.query.sortBy
+    if (typeof sortBy === 'string' && sortBy) {
+        try {
+            sortBy = JSON.parse(sortBy)
+        } catch (error) {
+            sortBy = null
+        }
+    }
+
     const filterBy = {
         txt: req.query.txt || '',
         minSeverity: +req.query.minSeverity || 0,
-        sortBy: req.query.sortBy,
-        sortDir: req.query.sortDir || 1,
+        sortBy: sortBy,
         pageIdx: req.query.pageIdx || 0,
         labels: req.query.labels
     }

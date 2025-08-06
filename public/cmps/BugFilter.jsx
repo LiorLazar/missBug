@@ -1,6 +1,6 @@
 const { useState, useEffect } = React
 
-export function BugFilter({ filterBy, onSetFilterBy, labels: labelsList, sortFields }) {
+export function BugFilter({ filterBy, onSetFilterBy, labels: labelsList }) {
 
     const [filterByToEdit, setFilterByToEdit] = useState(filterBy)
 
@@ -30,7 +30,33 @@ export function BugFilter({ filterBy, onSetFilterBy, labels: labelsList, sortFie
                 break
         }
 
-        setFilterByToEdit(prevFilter => ({ ...prevFilter, [field]: value }))
+        // Special handling for sortBy - parse the JSON string and create sortBy object
+        if (field === 'sortBy' && value) {
+            try {
+                const sortObject = JSON.parse(value)
+                setFilterByToEdit(prevFilter => ({
+                    ...prevFilter,
+                    sortBy: {
+                        sortField: sortObject.sortField,
+                        sortDir: sortObject.sortDir
+                    }
+                }))
+            } catch (error) {
+                // If parsing fails, just clear the sort
+                setFilterByToEdit(prevFilter => ({
+                    ...prevFilter,
+                    sortBy: null
+                }))
+            }
+        } else if (field === 'sortBy' && !value) {
+            // Clear sorting when empty option is selected
+            setFilterByToEdit(prevFilter => ({
+                ...prevFilter,
+                sortBy: null
+            }))
+        } else {
+            setFilterByToEdit(prevFilter => ({ ...prevFilter, [field]: value }))
+        }
     }
 
     function onSubmitFilter(ev) {
@@ -38,17 +64,16 @@ export function BugFilter({ filterBy, onSetFilterBy, labels: labelsList, sortFie
         onSetFilterBy(filterByToEdit)
     }
 
-    const { txt, minSeverity, labels, sortBy } = filterByToEdit
-
     const sortOptions = [
-        { value: 'title', label: 'Title (A-Z)' },
-        { value: '-title', label: 'Title (Z-A)' },
-        { value: 'severity', label: 'Severity (Low-High)' },
-        { value: '-severity', label: 'Severity (High-Low)' },
-        { value: 'createdAt', label: 'Date (Oldest)' },
-        { value: '-createdAt', label: 'Date (Newest)' }
+        { sortField: 'title', sortDir: 1, label: 'Title (A-Z)' },
+        { sortField: 'title', sortDir: -1, label: 'Title (Z-A)' },
+        { sortField: 'severity', sortDir: 1, label: 'Severity (Low-High)' },
+        { sortField: 'severity', sortDir: -1, label: 'Severity (High-Low)' },
+        { sortField: 'createdAt', sortDir: 1, label: 'Date (Oldest)' },
+        { sortField: 'createdAt', sortDir: -1, label: 'Date (Newest)' }
     ]
 
+    const { txt, minSeverity, labels } = filterByToEdit
     return (
         <section className="bug-filter">
             <h2>Filter</h2>
@@ -72,17 +97,18 @@ export function BugFilter({ filterBy, onSetFilterBy, labels: labelsList, sortFie
                         <option key={label} value={label}>{label}</option>
                     ))}
                 </select>
+
                 <label htmlFor="sortBy">Sort By:</label>
                 <select
                     className="sortBy"
                     name="sortBy"
                     id="sortBy"
-                    value={sortBy || ''}
+                    value={filterByToEdit.sortBy ? JSON.stringify(filterByToEdit.sortBy) : ''}
                     onChange={handleChange}
                 >
                     <option value="">Select Sort Option</option>
-                    {sortOptions.map(option => (
-                        <option key={option.value} value={option.value}>
+                    {sortOptions.map((option, index) => (
+                        <option key={index} value={JSON.stringify({ sortField: option.sortField, sortDir: option.sortDir })}>
                             {option.label}
                         </option>
                     ))}
