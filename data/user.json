@@ -1,0 +1,10 @@
+[
+    {
+        "_id": "u101",
+        "username": "lior",
+        "fullname": "Lior Lazar",
+        "password": "1234",
+        "score": 100,
+        "isAdmin": true
+    }
+]
