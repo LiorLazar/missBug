@@ -26,7 +26,7 @@ function remove(bugId) {
 }
 
 function save(bug) {
-    let method = bug._id ? 'put' : 'post'
+    const method = bug._id ? 'put' : 'post'
     return axios[method](BASE_URL, bug).then(res => res.data)
 }
 
