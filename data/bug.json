@@ -9,7 +9,11 @@
       "ui",
       "images",
       "profile"
-    ]
+    ],
+    "creator": {
+      "_id": "u101",
+      "fullname": "Lior Lazar"
+    }
   },
   {
     "_id": "A7k9L",
@@ -21,7 +25,11 @@
       "authentication",
       "validation",
       "forms"
-    ]
+    ],
+    "creator": {
+      "_id": "8j3KoI",
+      "fullname": "Lior La"
+    }
   },
   {
     "_id": "B2m8N",
@@ -34,7 +42,11 @@
       "timeout",
       "critical",
       "backend"
-    ]
+    ],
+    "creator": {
+      "_id": "u101",
+      "fullname": "Lior Lazar"
+    }
   },
   {
     "_id": "C5p1Q",
@@ -47,7 +59,11 @@
       "responsive",
       "ui",
       "navigation"
-    ]
+    ],
+    "creator": {
+      "_id": "8j3KoI",
+      "fullname": "Lior La"
+    }
   },
   {
     "_id": "D9t4R",
@@ -60,7 +76,11 @@
       "memory",
       "dashboard",
       "critical"
-    ]
+    ],
+    "creator": {
+      "_id": "u101",
+      "fullname": "Lior Lazar"
+    }
   },
   {
     "_id": "E3w7S",
@@ -72,7 +92,11 @@
       "search",
       "functionality",
       "backend"
-    ]
+    ],
+    "creator": {
+      "_id": "8j3KoI",
+      "fullname": "Lior La"
+    }
   },
   {
     "_id": "F6z0T",
@@ -85,7 +109,11 @@
       "upload",
       "progress",
       "minor"
-    ]
+    ],
+    "creator": {
+      "_id": "u101",
+      "fullname": "Lior Lazar"
+    }
   },
   {
     "_id": "G1y3U",
@@ -97,7 +125,11 @@
       "notifications",
       "audio",
       "minor"
-    ]
+    ],
+    "creator": {
+      "_id": "8j3KoI",
+      "fullname": "Lior La"
+    }
   },
   {
     "title": "Bug 1753904753277",
@@ -108,7 +140,11 @@
       "ui",
       "bug"
     ],
-    "_id": "tjq3k"
+    "_id": "tjq3k",
+    "creator": {
+      "_id": "u101",
+      "fullname": "Lior Lazar"
+    }
   },
   {
     "title": "Bug 1753904776085",
@@ -119,7 +155,11 @@
       "ui",
       "bug"
     ],
-    "_id": "2Udek"
+    "_id": "2Udek",
+    "creator": {
+      "_id": "8j3KoI",
+      "fullname": "Lior La"
+    }
   },
   {
     "title": "Bug 1753959625442",
@@ -130,6 +170,10 @@
       "ui",
       "bug"
     ],
-    "_id": "kK8kp"
+    "_id": "kK8kp",
+    "creator": {
+      "_id": "u101",
+      "fullname": "Lior Lazar"
+    }
   }
 ]
