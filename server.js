@@ -20,7 +20,7 @@ app.set('query parser', 'extended')
 //* Bug API:
 //* Read
 app.get('/api/bug', (req, res) => {
-    console.log(req.query)
+    // console.log(req.query)
 
     // Parse sortBy if it's a JSON string
     let sortBy = req.query.sortBy
@@ -250,5 +250,5 @@ app.get('/*all', (req, res) => {
     res.sendFile(path.resolve('public/index.html'))
 })
 
-const port = 3030
+const port = process.env.PORT || 3030
 app.listen(port, () => loggerService.info(`Server listening on port https://127.0.0.1:${port}/`))
